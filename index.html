@@ -4,24 +4,27 @@
     </head>
     <body>
         <div class="container">
-            <div class="scoreboard-col">
-                <h3 class="team-header">HOME</h3>
-                <div class="score-wrapper">0</div>
-                <div class="button-wrapper">
-                    <button class="add-btn">+1</button>
-                    <button class="add-btn">+2</button>
-                    <button class="add-btn">+3</button>
+            <div class="score">
+                <div class="scoreboard-col">
+                    <h3 class="team-header">HOME</h3>
+                    <div id="home-score" class="score-wrapper"></div>
+                    <div class="button-wrapper">
+                        <button onclick="addHome(1)" class="add-btn">+1</button>
+                        <button onclick="addHome(2)" class="add-btn">+2</button>
+                        <button onclick="addHome(3)" class="add-btn">+3</button>
+                    </div>
+                </div>
+                <div class="scoreboard-col">
+                    <h3 class="team-header">GUEST</h3>
+                    <div id="guest-score" class="score-wrapper"></div>
+                    <div class="button-wrapper">
+                        <button onclick="addGuest(1)" class="add-btn">+1</button>
+                        <button onclick="addGuest(2)" class="add-btn">+2</button>
+                        <button onclick="addGuest(3)"class="add-btn">+3</button>
+                    </div>
                 </div>
             </div>
-            <div class="scoreboard-col">
-                <h3 class="team-header">GUEST</h3>
-                <div class="score-wrapper">0</div>
-                <div class="button-wrapper">
-                    <button class="add-btn">+1</button>
-                    <button class="add-btn">+2</button>
-                    <button class="add-btn">+3</button>
-                </div>
-            </div>
+            <button id="reset-btn" onclick="resetScore()">Reset Score</button>
         </div>
         <script src="index.js"></script>
     </body>
